@@ -10,6 +10,5 @@ const pedido = new pedido_1.Pedido();
 pedido.adicionarItem(new itemPedido_1.ItemPedido(p1, 10));
 pedido.adicionarItem(new itemPedido_1.ItemPedido(p2, 15));
 pedido.adicionarItem(new itemPedido_1.ItemPedido(p3, 6));
-p1.setValor(1.99);
 pedido.calcValorTotal();
 console.log(pedido);

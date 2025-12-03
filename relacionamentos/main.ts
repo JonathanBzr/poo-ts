@@ -11,7 +11,7 @@ const pedido = new Pedido()
 pedido.adicionarItem(new ItemPedido(p1, 10))
 pedido.adicionarItem(new ItemPedido(p2, 15))
 pedido.adicionarItem(new ItemPedido(p3, 6))
-p1.setValor(1.99)
+
 
 pedido.calcValorTotal()
 console.log(pedido)

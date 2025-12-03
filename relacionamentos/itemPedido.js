@@ -15,9 +15,5 @@ class ItemPedido {
     getQuantidade() {
         return this.quantidade;
     }
-    //incorporar para na saída ter o nome do produto
-    getNomeProduto() {
-        return this.produto.getDescricao();
-    }
 }
 exports.ItemPedido = ItemPedido;

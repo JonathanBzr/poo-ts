@@ -21,8 +21,4 @@ export class ItemPedido {
         return this.quantidade
     }
     
-    //incorporar para na saída ter o nome do produto
-    getNomeProduto(): string {
-        return this.produto.getDescricao()
-    }
 }
