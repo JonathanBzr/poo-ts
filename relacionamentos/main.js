@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const itemPedido_1 = require("./itemPedido");
+const pedido_1 = require("./pedido");
+const produto_1 = require("./produto");
+let p1 = new produto_1.Produto(65156, 99.90, "Headset");
+let p2 = new produto_1.Produto(73891, 38.89, "Mouse c/ fio");
+let p3 = new produto_1.Produto(41321, 9.90, "Limpa telas");
+const pedido = new pedido_1.Pedido();
+pedido.adicionarItem(new itemPedido_1.ItemPedido(p1, 10));
+pedido.adicionarItem(new itemPedido_1.ItemPedido(p2, 15));
+pedido.adicionarItem(new itemPedido_1.ItemPedido(p3, 6));
+p1.setValor(1.99);
+pedido.calcValorTotal();
+console.log(pedido);
