@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const itemPedido_1 = require("./itemPedido");
+const pedido_1 = require("./pedido");
+const produto_1 = require("./produto");
+let p1 = new produto_1.Produto(65156, 99.90, "Headset");
+let p2 = new produto_1.Produto(73891, 38.89, "Mouse c/ fio");
+let p3 = new produto_1.Produto(41321, 9.90, "Limpa telas");
+const item1 = new itemPedido_1.ItemPedido(p1, 1);
+const item2 = new itemPedido_1.ItemPedido(p2, 15);
+const item3 = new itemPedido_1.ItemPedido(p3, 6);
+const pedido = new pedido_1.Pedido();
+pedido.adicionarItem(item1);
+pedido.adicionarItem(item2);
+pedido.adicionarItem(item3);
+pedido.calcValorTotal();
+console.dir(pedido, { depth: null });
+/*pesquisei maneiras de arrumar a saída no terminal e encontrei essa.
+Console.dir() é igual ao Console.log(), porém o .dir é nativo do NODE
+e o { depth: null } impede que o NODE faça um resumo das informações.
+*/ 
