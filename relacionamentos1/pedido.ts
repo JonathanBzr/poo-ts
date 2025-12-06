@@ -2,7 +2,7 @@ import { ItemPedido } from "./itemPedido"
 
 export class Pedido {
     private itens: ItemPedido[] = []
-    private valorTotal: number = 0;
+    private valorTotal: number = 0
 
     adicionarItem(it:ItemPedido): Boolean {
         this.itens.push(it)

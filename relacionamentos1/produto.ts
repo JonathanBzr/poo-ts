@@ -29,7 +29,7 @@ export class Produto {
         this.descricao = desc
     }
 
-    public getDescricao(): string {
+    getDescricao(): string {
         return this.descricao
     }
 }

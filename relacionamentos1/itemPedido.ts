@@ -5,6 +5,7 @@ export class ItemPedido {
     private quantidade: number 
 
     constructor(produto: Produto, qtd: number) {
+        //this.id = id
         this.produto = produto
         this.quantidade = qtd
     }
@@ -20,5 +21,5 @@ export class ItemPedido {
     getQuantidade() {
         return this.quantidade
     }
-    
+
 }
