@@ -13,9 +13,7 @@ const pedido = new pedido_1.Pedido();
 pedido.adicionarItem(item1);
 pedido.adicionarItem(item2);
 pedido.adicionarItem(item3);
+pedido.setDesconto(5);
 pedido.calcValorTotal();
 console.dir(pedido, { depth: null });
-/*pesquisei maneiras de arrumar a saída no terminal e encontrei essa.
-Console.dir() é igual ao Console.log(), porém o .dir é nativo do NODE
-e o { depth: null } impede que o NODE faça um resumo das informações.
-*/ 
+console.log(`O valor final, com desconto é: R$ ${pedido.valorFinal().toFixed(2)}`);
