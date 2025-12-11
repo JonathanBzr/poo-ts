@@ -1,25 +1,43 @@
 import { Produto } from "./produto"
 
 export class ItemPedido {
-    private produto: Produto 
-    private quantidade: number 
+    constructor(
+        private _id: number,
+        private _produto: Produto,
+        private _quantidade: number
+    ) {}
 
-    constructor(produto: Produto, qtd: number) {
-        //this.id = id
-        this.produto = produto
-        this.quantidade = qtd
+    public set Id(id: number) {
+        this._id = id
     }
 
-    getProduto() {
-        return this.produto
+    public get Id(): number {
+        return this._id
     }
 
-    setQuantidade(qtd: number) {
-        this.quantidade = qtd
+   public set Produto(value: Produto) {
+        this._produto = value
     }
 
-    getQuantidade() {
-        return this.quantidade
+    public get Produto() {
+        return this._produto
+    }
+
+    public set Quantidade(qtd: number) {
+        this._quantidade = qtd
+    }
+
+    public get Quantidade() {
+        return this._quantidade
+    }
+
+    public aumentarQuantidadeItem(): number {
+        return this._quantidade +=1
+    }
+
+    public diminuirQuantidadeItem(): number {
+        if(this._quantidade ==1) return this._quantidade
+        return this._quantidade -= 1
     }
 
 }

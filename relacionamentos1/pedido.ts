@@ -1,38 +1,27 @@
-import { ItemPedido } from "./itemPedido"
+import { Carrinho } from "./carrinho"
 
 export class Pedido {
-    private itens: ItemPedido[] = []
-    private valorTotal: number = 0
-    private desconto: number = 0
+    private carrinho: Carrinho
+    private valorTotal: number 
 
-    adicionarItem(it:ItemPedido): Boolean {
-        this.itens.push(it)
-        return true
+    constructor(carrinho: Carrinho, valorTotal: number) {
+        this.carrinho = carrinho
+        this.valorTotal = valorTotal
     }
 
-    setDesconto(porcentagem: number) {
-        let desc = porcentagem/100
-
-        this.desconto = this.calcValorTotal() * desc
+    public set Carrinho(value: Carrinho) {
+        this.carrinho = value
     }
 
-    getDesconto(): number {
-        return this.desconto
+    public get Carrinho(): Carrinho {
+        return this.carrinho
     }
 
-    calcValorTotal(): number {
-        this.valorTotal = 0;
-
-        for(let i = 0; i < this.itens.length; i++) {
-            const item = this.itens[i];
-            this.valorTotal += item.getProduto().getValor() *item.getQuantidade()}
-
+    public get ValorTotal() {
         return this.valorTotal
     }
 
-    valorFinal() {
-        let vf = this.calcValorTotal() - this.desconto
-       
-        return vf
+    public getVT() {
+        this.valorTotal = this.carrinho.calcValorTotal() ?? 0
     }
 }

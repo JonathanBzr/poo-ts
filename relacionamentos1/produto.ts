@@ -1,35 +1,45 @@
 export class Produto {
+    private id: number
     private codigo: number 
     private valor: number 
     private descricao: string 
 
-    constructor(cod: number, valor: number, descricao: string) {
+    constructor(cod: number,id: number, valor: number, descricao: string) {
         this.descricao = descricao
+        this.id = id
         this.codigo = cod
         this.valor = valor
     }
 
-    setCodigo(cod: number) {
+    public set Id(id: number) {
+        this.id = id
+    }
+
+    public get Id():number {
+        return this.id
+    }
+
+    public set Codigo(cod: number) {
         this.codigo = cod
     }
 
-    getCodigo(): number {
+    public get Codigo(): number {
         return this.codigo
     }
 
-    setValor(valor: number) {
+    public set Valor(valor: number) {
         this.valor = valor
     }
 
-    getValor(): number {
+    public get Valor(): number {
         return this.valor
     }
 
-    setDescricao(desc: string) {
+    public set Descricao(desc: string) {
         this.descricao = desc
     }
 
-    getDescricao(): string {
+    public get Descricao(): string {
         return this.descricao
     }
 }

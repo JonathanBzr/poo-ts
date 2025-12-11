@@ -19,5 +19,5 @@ pedido.adicionarItem(item3)
 pedido.setDesconto(5)
 pedido.calcValorTotal()
 console.dir(pedido, {depth: null })
-console.log(`O valor final, com desconto é: R$ ${pedido.valorFinal().toFixed(2)}`)
+console.log(`O valor final com desconto aplicado é: R$ ${pedido.valorFinal().toFixed(2)}`)
 
